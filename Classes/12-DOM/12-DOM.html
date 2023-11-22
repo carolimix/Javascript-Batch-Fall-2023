@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DOM</title>
+  </head>
+  <body>
+    <h2>Choose the amount of Hummus servings</h2>
+    <input
+      type="number"
+      id="amount"
+      min="0"
+      value="0"
+      oninput="amountChanged()"
+    />
+    <div id="totalPrice"></div>
+    <script>
+      function amountChanged() {
+        let amountElement = document.getElementById("amount");
+        let amount = amountElement.valueAsNumber;
+        let hummusPrice = 1.99;
+        let totalPrice = hummusPrice * amount;
+        let priceElement = document.getElementById("totalPrice");
+
+        priceElement.textContent = totalPrice;
+      }
+    </script>
+  </body>
+</html>

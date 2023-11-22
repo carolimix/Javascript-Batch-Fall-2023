@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Appending Elements</title>
+  </head>
+  <body>
+    <div id="myDiv"></div>
+    <button onclick="generateDiv()">generate div</button>
+    <script>
+      let myDiv = document.getElementById("myDiv");
+      let mySpan = document.createElement("span");
+      mySpan.textContent = "Hello";
+      myDiv.appendChild(mySpan);
+      let baseElement = 6;
+
+      function generateDiv() {
+        let newDiv = document.createElement("div");
+        newDiv.textContent = `Element ${baseElement}`;
+        document.body.appendChild(newDiv);
+        baseElement++;
+      }
+      for (let i = 1; i <= 5; i++) {
+        let someDiv = document.createElement("div");
+        document.body.appendChild(someDiv);
+        someDiv.textContent = `Element ${i}`;
+      }
+    </script>
+  </body>
+</html>

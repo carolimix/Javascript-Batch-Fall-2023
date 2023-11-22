@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <script
+      src="https://cdn.plot.ly/plotly-2.27.0.min.js"
+      charset="utf-8"
+    ></script>
+    <title>Libraries + fetch examples and tasks</title>
+  </head>
+  <body>
+    <div id="myGraph" style="width: 600px; height: 250px"></div>
+    <script>
+      async function getForecastData() {
+        let response = await fetch(
+          "https://api.open-meteo.com/v1/forecast?latitude=52.50&longitude=13.48&hourly=temperature_2m&forecast_days=3"
+        );
+        let data = await response.json();
+        let temperature = data.hourly.temperature_2m;
+        let time = data.hourly.time;
+
+        let dataSet = {
+          x: time,
+          y: temperature,
+          type: "bar",
+        };
+
+        Plotly.newPlot("myGraph", [dataSet]);
+      }
+
+      getForecastData();
+    </script>
+  </body>
+</html>

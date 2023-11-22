@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>loops</title>
+  </head>
+  <body>
+    <script>
+      let cupsOfFlour = 0; //Initialization
+      while (cupsOfFlour < 5) {
+        //condition
+        console.log("Take a cup of flour and put it in the bowl"); //action
+        cupsOfFlour++; //update
+        console.log(`There are now ${cupsOfFlour} cups of flour in the bowl`);
+      }
+      //este ejemplo primero suma uno y desopues muestra, pero es mejor primero el output y despes el counter
+      let counter = 0;
+      while (counter < 5) {
+        counter++;
+        console.log(counter);
+      }
+
+      let i = 10;
+      while (i < 15) {
+        console.log(i);
+        i++;
+      }
+
+      let name = "Carolina";
+      let contador = 0;
+      while (contador < 5) {
+        console.log(name);
+        contador++;
+      }
+
+      let squares = 1;
+      while (squares <= 10) {
+        console.log(squares * squares);
+        squares++;
+      }
+
+      //FOR LOOP
+      //task 1
+      for (let i = 0; i <= 10; i++) {
+        console.log(i);
+      }
+      //task 2
+      for (let i = 13; i <= 17; i++) {
+        console.log(i);
+      }
+
+      //loops and arrays
+      let friends = ["Harald", "Sevtap", "Akram", "Abdo", "Meli"];
+      for (let i = 0; i < friends.length; i++) {
+        console.log(`hello ${friends[i]}`);
+      }
+
+      for (let i = 5; i >= -3; i--) {
+        console.log(i);
+      }
+
+      let sum = 0;
+      for (let i = 1; i <= 10; i++) {
+        sum += i;
+        console.log(sum);
+      }
+      document.body.textContent = "";
+
+      for (let i = 10; i >= 0; i--) {
+        if (i === 0) {
+          console.log("liftoff");
+        } else {
+          console.log(i);
+        }
+        document.body.textContent += i;
+      }
+    </script>
+  </body>
+</html>

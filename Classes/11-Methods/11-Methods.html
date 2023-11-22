@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Methods</title>
+  </head>
+  <body>
+    <h1 id="greeting">Hello, World!</h1>
+    <button onclick="changeText()">Click Me</button>
+
+    <div height="400px" width="400px" id="task1">test</div>
+    <button onclick="changeColor('red')">Red</button>
+
+    <div height="400px" width="400px" id="task2">test</div>
+    <button onclick="countMe()">counter</button>
+
+    <h2>Choose the amount of Hummus servings</h2>
+    <input
+      type="number"
+      id="amount"
+      min="0"
+      value="0"
+      oninput="amountChanged()"
+    />
+
+    <script>
+      let car = {
+        company: "Ford",
+        model: "Focus",
+        describe: function () {
+          console.log(`I drive a ${this.company} ${this.model}`);
+        },
+      };
+
+      car.describe();
+
+      function changeText() {
+        document.getElementById("greeting").textContent = "Hi, There!";
+      }
+
+      function changeColor(color) {
+        document.getElementById("task1").style.backgroundColor = "red";
+      }
+
+      let counter = 0;
+      function countMe() {
+        counter += 1;
+        document.getElementById(
+          "task2"
+        ).textContent = `You clicked this button ${counter} times`;
+      }
+
+      function amountChanged(number) {
+        document.getElementById("amount");
+      }
+    </script>
+  </body>
+</html>
