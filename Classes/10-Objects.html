@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Objects</title>
+  </head>
+  <body>
+    <script>
+      let me = {
+        name: "Carolina",
+        favoriteFood: "Pommes",
+        hairColor: "brown",
+        eyeColor: "brown",
+        age: 33,
+        address: {
+          country: "Germany",
+          city: "Berlin",
+        },
+        introduceMe: function () {
+          console.log(
+            `Hi, my name is ${this.name} and I live in ${this.city} `
+          );
+        },
+      };
+      me.introduceMe();
+
+      let friend = {
+        name: "Julia",
+        favoriteFood: "Toasts",
+        hairColor: "caramel",
+        eyeColor: "brown",
+        age: 33,
+        //aca tambien puedo poner una funcion comom proiedad, y se llaman Metodos.
+      };
+
+      function introducePerson(person) {
+        console.log(
+          `Hi, my name is ${person.name} and my favorite food is ${person.favoriteFood}.`
+        );
+      }
+      introducePerson(me);
+      introducePerson(friend);
+
+      function whoIsOlder(friend1, friend2) {
+        if (friend1.age < friend2.age) {
+          console.log(`${friend2.name} is older than me`);
+        } else if (friend1.age > friend2.age) {
+          console.log(`Im older than ${friend2.name}`);
+        } else {
+          console.log(`we are the same age!`);
+        }
+      }
+
+      whoIsOlder(me, friend);
+
+      let newFunction = () => {};
+    </script>
+  </body>
+</html>

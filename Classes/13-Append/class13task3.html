@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Task 3 class 13</title>
+  </head>
+  <body>
+    <input type="text" id="item" />
+    <button onclick="addItem()">Add</button>
+    <script>
+      let shoppingItem = "";
+      function addItem() {
+        let item = document.getElementById("item");
+        let itemValue = item.value;
+        if (itemValue !== shoppingItem) {
+          let divElement = document.createElement("div");
+          divElement.onclick = function () {
+            divElement.remove(shoppingItem);
+          };
+          document.body.appendChild(divElement);
+          divElement.textContent = itemValue;
+        }
+      }
+    </script>
+  </body>
+</html>

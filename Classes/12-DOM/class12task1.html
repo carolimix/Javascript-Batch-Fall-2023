@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="hello"></div>
+    <input type="text" id="name" />
+    <button onclick="changeContent()">Click Me!</button>
+    <script>
+      function changeContent() {
+        let divElement = document.getElementById("hello");
+        let nameElement = document.getElementById("name");
+        let name = nameElement.value;
+        divElement.textContent = "Hello " + name + "!";
+      }
+    </script>
+  </body>
+</html>

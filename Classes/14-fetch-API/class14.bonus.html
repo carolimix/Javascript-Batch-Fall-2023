@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Api</title>
+  </head>
+  <body>
+    <input type="text" id="countryInput" united />
+    <button onclick="showCountry(data)">Enter a country name 🌎</button>
+
+    <div id="countryDiv"></div>
+    <img src="" alt="" id="coatOfArms" width="100px" />
+    <img src="" alt="" id="flag" width="100px" />
+    <div id="capital"></div>
+    <div id="area"></div>
+    <div id="population"></div>
+    <div id="borderingCountries"></div>
+    <script>
+      async function restCountries() {
+        let response = await fetch("https://restcountries.com/v3.1/all");
+        let data = await response.json();
+        showCountry(data[0]);
+      }
+      function showCountry(data) {
+          /*  let flag = document.getElementById("flag");
+        flag.src = data[0].flags.svg;
+        let coatOfArms = document.getElementById("coatOfArms");
+        coatOfArms.src = data[0].coatOfArms.svg;
+        let capital = document.getElementById("capital");
+        capital.textContent = `Capital: ${data[0].capital}`;
+        let area = document.getElementById("area");
+        area.textContent = `Area: ${data[0].area}`;
+        let population = document.getElementById("population");
+        population.textContent = `Population: ${data[0].population}`; */
+        }
+      }
+
+      restCountries();
+    </script>
+  </body>
+</html>

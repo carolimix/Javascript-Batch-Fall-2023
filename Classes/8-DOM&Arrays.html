@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>arrays</title>
+  </head>
+  <body>
+    <script>
+      let friends = ["Estefi", "Caro", "Lucia", "Julia", "Luz", "Julieta"];
+      friends[friends.length - 1] = "Karen";
+      friends.push("Mica");
+      console.log(friends.length);
+      console.log(`Welcome ${friends[6]} to out group of friends!`);
+      let ticket = 7;
+      let totalPrice = friends.length * ticket;
+      console.log(totalPrice);
+      let firstFriend = totalPrice / 2;
+      let remaining = friends.length - 2;
+      let remainingFriendsAmount = firstFriend / remaining;
+      console.log(`${friends[0]} will pay ${firstFriend}`);
+      console.log(`Rest of friends will pay ${remainingFriendsAmount}`);
+      console.log(
+        `${friends[friends.length - 1]} you dont have to pay! Happy Birthday!🎉`
+      );
+      /*   console.log(`hello ${friends[0]}`);
+      console.log(`hello ${friends[1]}`);
+      console.log(`hello ${friends[2]}`); */
+    </script>
+  </body>
+</html>

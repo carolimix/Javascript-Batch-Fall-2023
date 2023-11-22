@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lesson 3</title>
+  </head>
+  <body>
+    test test test
+    <script>
+      let canProgramJavaScript = true;
+      let canProgramPython = true;
+      let canSpeakGerman = true;
+
+      let canApply =
+        (canProgramJavaScript || canProgramPython) && canSpeakGerman;
+      document.body.textContent = canApply;
+
+      let pricePerTicket = 8;
+      let friends = 3;
+      let popcornPrice = 7;
+      let totalBudget = 30;
+      let totalPrice = friends * pricePerTicket + friends * popcornPrice;
+      let isCheap = popcornPrice < 5 && pricePerTicket < 7;
+      let isEnough = totalBudget >= totalPrice;
+    </script>
+  </body>
+</html>
